@@ -43,11 +43,9 @@ function Questions() {
   const classes = useStyles();
 
   const [progress, setProgress] = React.useState(0);
-  const [loading, setLoading] = React.useState(true);
 
   const value = useContext(AppContext);
   let { questionAnswer, questions, answers } = value.state;
-  console.log(answers.length, questions.length);
 
   useEffect(() => {
     setProgress(

@@ -8,7 +8,6 @@ function App() {
   let [questions, setQuestions] = useState([]);
   let [answers, setAnswers] = useState([]);
   let [questionAnswer, setQuestionAnswer] = useState({});
-  let [questionCompleted, setQuestionCompleted] = useState(false);
 
   useEffect(() => {
     setQuestions(questionsArray);
@@ -38,8 +37,6 @@ function App() {
         if (qa.resumeFieldId === questionAnswer.resumeFieldId) {
           setQuestionAnswer(questions[index + 1]);
         }
-      } else {
-        setQuestionCompleted(true);
       }
     });
   };
@@ -49,7 +46,6 @@ function App() {
       value={{
         state: {
           questionAnswer,
-          questionCompleted,
           questions,
           answers,
         },
